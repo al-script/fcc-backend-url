@@ -2,7 +2,15 @@
 
 <html>
   <head>
-    <title>URL Shortener Microservice | freeCodeCamp.org</title>
+    <title>URL Shortener Microservice | al-script x freeCodeCamp.org</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -10,23 +18,231 @@
     />
     <link href="/public/style.css" rel="stylesheet" type="text/css" />
   </head>
-
   <body>
-    <h1>URL Shortener Microservice</h1>
-    <main>
-      <section>
-        <form action="api/shorturl" method="POST">
-          <fieldset>
-            <legend>URL Shortener</legend>
-            <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
-            <input type="submit" value="POST URL" />
-          </fieldset>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
-    </footer>
+    
+    <!-- Add bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <div>
+      <!-- Top navbar -->
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="https://codepen.io/al-script"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><div class="display-5">AS al-script</div></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://Timestamp-Microservice-freeCodeCamp.al-script.repl.co"
+                  target="_top"
+                  rel="noopener noreferrer"
+                  >Timestamp Microservice</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://Request-Header-Parser-Microservice-freeCodeCamp.al-script.repl.co"
+                  target="_top"
+                  rel="noopener noreferrer"
+                  >Request Header Parser Microservice</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="https://URL-Shortener-Microservice-freeCodeCamp.al-script.repl.co"
+                  target="_top"
+                  rel="noopener noreferrer"
+                  >URL Shortener Microservice</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://Exercise-Tracker-freeCodeCamp.al-script.repl.co"
+                  target="_top"
+                  rel="noopener noreferrer"
+                  >Exercise Tracker</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://File-Metadata-Microservice-freeCodeCamp.al-script.repl.co"
+                  target="_top"
+                  rel="noopener noreferrer"
+                  >File Metadata Microservice</a
+                >
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <a
+                class="navbar-text"
+                href="https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_large.svg"
+                  alt=""
+                  width="218.75"
+                  height="25"
+                  class="d-inline align-text-top"
+                />
+              </a>
+              <a
+                class="nav-link"
+                href="https://www.freecodecamp.org/learn/back-end-development-and-apis/#back-end-development-and-apis-projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Back End Development & APIs</a
+              >
+            </span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Responsive container -->
+      <div class="d-flex min-vh-100">
+        <div class="container d-flex align-items-center justify-content-center">
+          <div class="col-12 p-3">
+            <div class="row p-3">
+              
+              <!-- Heading -->
+              <div class="display-1">URL Shortener Microservice</div>
+
+              <!-- Responsive card -->
+              <div class="card shadow p-1 gy-3">
+                <div class="card-body">
+                  <div class="container">
+                    <main>
+                      <section>
+                        <form
+                          class="row g-3"
+                          action="api/shorturl"
+                          method="POST"
+                        >
+                          <div class="input-group">
+                            <input
+                              class="form-control"
+                              id="url_input"
+                              type="text"
+                              name="url"
+                              placeholder="https://www.example.com/"
+                            />
+                            <input
+                              class="btn btn-primary"
+                              type="submit"
+                              value="POST URL"
+                              id="button-addon2"
+                            />
+                          </div>
+                        </form>
+                      </section>
+                    </main>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <nav class="navbar bg-light shadow-sm">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand display-6"
+            href="https://codepen.io/al-script"
+            target="_blank"
+            rel="noopener noreferrer"
+            >al-script x freeCodeCamp</a
+          >
+          <span class="navbar-text">
+            <a class="navbar-brand display-6 d-inline align-text-center"
+              >Built with</a
+            >
+            <a
+              class="navbar-brand"
+              href="https://nodejs.org/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                alt="Node.js"
+                width=""
+                height="24"
+                class="d-inline align-text-top"
+              />
+            </a>
+            <a
+              class="navbar-brand"
+              href="https://expressjs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png"
+                width=""
+                alt="Express"
+                height="24"
+                class="d-inline align-text-top"
+              />
+              <a
+                class="navbar-brand"
+                href="https://www.mongodb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/331488/mongodb.svg"
+                  alt="MongoDB"
+                  width=""
+                  height="24"
+                  class="d-inline align-text-top"
+                />
+              </a>
+            </a>
+            <a
+              class="navbar-brand"
+              href="https://getbootstrap.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
+                alt="Bootstrap"
+                width=""
+                height="24"
+                class="d-inline align-text-top"
+              />
+            </a>
+          </span>
+        </div>
+      </nav>
+    </div>
   </body>
 </html>
